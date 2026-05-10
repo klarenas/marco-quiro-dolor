@@ -14,8 +14,8 @@ export const Route = createFileRoute("/politica-privacidad")({
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mt-10">
-      <h2 className="font-display text-2xl font-extrabold uppercase text-[#0B2545]">{title}</h2>
-      <div className="mt-3 space-y-3 text-base leading-[1.8] text-[#0B2545]">{children}</div>
+      <h2 className="font-display text-2xl font-extrabold uppercase text-[#0F4C4C]">{title}</h2>
+      <div className="mt-3 space-y-3 text-base leading-[1.8] text-[#0F4C4C]">{children}</div>
     </section>
   );
 }
@@ -23,7 +23,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 function PoliticaPrivacidad() {
   return (
     <main lang="es-MX" className="min-h-screen bg-white">
-      <header style={{ backgroundColor: "#0B2545" }} className="px-5 py-5 md:px-8">
+      <header style={{ backgroundColor: "#0F4C4C" }} className="px-5 py-5 md:px-8">
         <div className="mx-auto flex max-w-[720px] items-center justify-between gap-4">
           <span className="font-display text-[22px] font-bold uppercase text-white">
             Marco Santillán
@@ -38,10 +38,10 @@ function PoliticaPrivacidad() {
       </header>
 
       <article className="mx-auto max-w-[720px] px-5 py-12 md:px-8">
-        <h1 className="font-display text-3xl font-extrabold uppercase text-[#0B2545] md:text-4xl">
+        <h1 className="font-display text-3xl font-extrabold uppercase text-[#0F4C4C] md:text-4xl">
           Política de Privacidad
         </h1>
-        <p className="mt-4 text-sm text-[#1A3A6B]">Última actualización: 2025</p>
+        <p className="mt-4 text-sm text-[#1F7A7A]">Última actualización: 2025</p>
 
         <Section title="1. Responsable del tratamiento">
           <p>
@@ -99,13 +99,13 @@ function PoliticaPrivacidad() {
           </p>
         </Section>
 
-        <p className="mt-12 rounded-md border-l-4 border-[#E8621A] bg-[#F4F6F9] p-4 text-sm italic text-[#1A3A6B]">
+        <p className="mt-12 rounded-md border-l-4 border-[#E8621A] bg-[#E8F3F3] p-4 text-sm italic text-[#1F7A7A]">
           Esta política es un punto de partida basado en los requisitos de la LFPDPPP. Se
           recomienda revisarla con un asesor legal antes de publicarla.
         </p>
       </article>
 
-      <footer style={{ backgroundColor: "#F4F6F9" }} className="px-5 py-8 text-center text-sm text-[#1A3A6B]">
+      <footer style={{ backgroundColor: "#E8F3F3" }} className="px-5 py-8 text-center text-sm text-[#1F7A7A]">
         <div className="space-x-4">
           <a href="/politica-privacidad" className="hover:underline">Política de Privacidad</a>
           <span>·</span>

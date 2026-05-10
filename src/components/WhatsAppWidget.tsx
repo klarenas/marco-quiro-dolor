@@ -63,7 +63,7 @@ export default function WhatsAppWidget() {
             <button
               aria-label="Cerrar mensaje"
               onClick={closeBubble}
-              className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#0B2545] shadow-md hover:bg-gray-100"
+              className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#0F4C4C] shadow-md hover:bg-gray-100"
             >
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
@@ -72,15 +72,15 @@ export default function WhatsAppWidget() {
             <div className="flex items-center gap-2">
               <div
                 className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-display text-xs font-bold text-white"
-                style={{ backgroundColor: "#0B2545" }}
+                style={{ backgroundColor: "#0F4C4C" }}
               >
                 MS
               </div>
-              <p className="font-display text-[14px] font-bold leading-tight text-[#0B2545]">
+              <p className="font-display text-[14px] font-bold leading-tight text-[#0F4C4C]">
                 Marco Santillán
               </p>
             </div>
-            <p className="mt-2 text-[13px] leading-snug text-[#0B2545]">
+            <p className="mt-2 text-[13px] leading-snug text-[#0F4C4C]">
               Hola 👋 ¿Tienes dolor de espalda, cuello o ciático? Escríbeme y agendamos hoy.
             </p>
             <a
@@ -125,7 +125,7 @@ export default function WhatsAppWidget() {
         </span>
         <span
           className="wa-tooltip absolute right-full mr-3 hidden whitespace-nowrap rounded-lg px-3 py-2 text-sm text-white shadow-lg md:block"
-          style={{ backgroundColor: "#0B2545" }}
+          style={{ backgroundColor: "#0F4C4C" }}
         >
           ¿Tienes dudas? Escríbenos ahora
         </span>

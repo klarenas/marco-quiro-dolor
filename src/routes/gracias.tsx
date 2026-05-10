@@ -36,7 +36,7 @@ function GraciasPage() {
       {/* CONVERSIÓN PRINCIPAL — disparar pixel Meta aquí */}
       <main lang="es-MX" className="min-h-screen bg-white font-body">
         {/* SECCIÓN 1 — Confirmación emocional */}
-        <section className="bg-[#0B2545] text-white px-6 py-20 text-center">
+        <section className="bg-[#0F4C4C] text-white px-6 py-20 text-center">
           <div className="max-w-2xl mx-auto flex flex-col items-center">
             <div
               className="w-20 h-20 rounded-full bg-[#E8621A] flex items-center justify-center mb-8"
@@ -63,17 +63,17 @@ function GraciasPage() {
             >
               ¡Listo! Tu solicitud llegó a Marco.
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-[#CBD5E1] max-w-xl">
+            <p className="mt-6 text-base sm:text-lg text-[#BFE3E0] max-w-xl">
               En menos de 2 horas Marco o su equipo te contactarán para coordinar tu primera evaluación. Revisa tu WhatsApp y tu teléfono.
             </p>
           </div>
         </section>
 
         {/* SECCIÓN 2 — Qué pasa ahora */}
-        <section className="bg-[#F4F6F9] px-6 py-16 md:py-20">
+        <section className="bg-[#E8F3F3] px-6 py-16 md:py-20">
           <div className="max-w-6xl mx-auto">
             <h2
-              className="font-display font-extrabold uppercase text-center text-[#0B2545] text-2xl sm:text-3xl md:text-4xl mb-10 md:mb-14"
+              className="font-display font-extrabold uppercase text-center text-[#0F4C4C] text-2xl sm:text-3xl md:text-4xl mb-10 md:mb-14"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
               Qué pasa ahora
@@ -96,7 +96,7 @@ function GraciasPage() {
                   d: "En tu primera cita Marco evalúa el origen real de tu dolor y empieza el tratamiento. Desde el día uno ya estás trabajando en la causa — no en el síntoma.",
                 },
               ].map((s) => (
-                <div key={s.n} className="bg-white rounded-xl p-6 md:p-7 shadow-sm border border-[#E2E8F0]">
+                <div key={s.n} className="bg-white rounded-xl p-6 md:p-7 shadow-sm border border-[#CDE3E1]">
                   <div
                     className="text-[#E8621A] font-extrabold leading-none mb-3"
                     style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "48px" }}
@@ -104,12 +104,12 @@ function GraciasPage() {
                     {s.n}
                   </div>
                   <h3
-                    className="font-display font-bold uppercase text-[#0B2545] text-xl mb-2"
+                    className="font-display font-bold uppercase text-[#0F4C4C] text-xl mb-2"
                     style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                   >
                     {s.t}
                   </h3>
-                  <p className="text-[#475569] text-sm leading-relaxed">{s.d}</p>
+                  <p className="text-[#3F6B6B] text-sm leading-relaxed">{s.d}</p>
                 </div>
               ))}
             </div>
@@ -117,7 +117,7 @@ function GraciasPage() {
         </section>
 
         {/* SECCIÓN 3 — CTA WhatsApp */}
-        <section className="bg-[#0B2545] text-white px-6 py-16 md:py-20 text-center">
+        <section className="bg-[#0F4C4C] text-white px-6 py-16 md:py-20 text-center">
           <div className="max-w-xl mx-auto">
             <h2
               className="font-display font-extrabold uppercase text-2xl sm:text-3xl md:text-4xl"
@@ -137,14 +137,14 @@ function GraciasPage() {
               </svg>
               Escribir a Marco por WhatsApp
             </a>
-            <p className="mt-6 text-sm text-[#CBD5E1]">
+            <p className="mt-6 text-sm text-[#BFE3E0]">
               Marco atiende en Monterrey, NL · Sesión desde $800 MXN
             </p>
           </div>
         </section>
 
-        <div className="bg-[#0B2545] text-center pb-6">
-          <p className="text-xs text-[#64748B]">
+        <div className="bg-[#0F4C4C] text-center pb-6">
+          <p className="text-xs text-[#5A8585]">
             © Marco Santillán · <a href="/politica-privacidad" className="hover:text-white">Política de privacidad</a> · <a href="/aviso-legal" className="hover:text-white">Aviso legal</a>
           </p>
         </div>
