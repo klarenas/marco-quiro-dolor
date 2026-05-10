@@ -641,7 +641,8 @@ function Location() {
 
 function MiniFooter() {
   return (
-    <footer style={{ backgroundColor: "#082828" }} className="py-8 text-center text-xs text-[#BFE3E0]">
+    <footer style={{ backgroundColor: "#082828" }} className="py-10 text-center text-xs text-[#BFE3E0]">
+      <img src={logoMarco} alt="Logo Marco Santillán" className="mx-auto mb-3 h-14 w-14 rounded-full bg-white p-1.5" width={56} height={56} />
       <p>© {new Date().getFullYear()} Marco Santillán · Monterrey, NL</p>
       <p className="mt-2 space-x-4">
         <a href="/politica-privacidad" className="hover:text-white">Política de Privacidad</a>
