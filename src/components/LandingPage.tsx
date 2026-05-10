@@ -692,7 +692,7 @@ export default function LandingPage() {
       <Hero />
       <Problem />
       <Solution />
-      <Testimonials />
+      
       <LifeChange />
       <Offer />
       <Faq />
