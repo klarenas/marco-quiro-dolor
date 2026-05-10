@@ -529,7 +529,10 @@ function LifeChange() {
             </figure>
           ))}
         </div>
-        <div className="reveal mt-10 flex justify-center">
+        <p className="reveal mt-10 text-center font-display text-lg font-bold uppercase tracking-wide text-[#BFE3E0]">
+          +13,000 personas siguen a Marco en Facebook · Monterrey, NL
+        </p>
+        <div className="reveal mt-6 flex justify-center">
           <div className="w-full max-w-[480px]">
             <CtaWhats full>→ Quiero agendar mi cita hoy</CtaWhats>
           </div>
