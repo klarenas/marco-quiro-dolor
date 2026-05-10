@@ -4,9 +4,8 @@ import WhatsAppWidget from "./WhatsAppWidget";
 
 import logoMarco from "@/assets/logo.jpg";
 import marcoFoto from "@/assets/marco.jpg";
-import antesDespues1 from "@/assets/antes-despues-1.jpg";
-import antesDespues2 from "@/assets/antes-despues-2.jpg";
-import antesDespues3 from "@/assets/antes-despues-3.jpg";
+import rodillaAntes from "@/assets/rodilla-antes.jpg";
+import rodillaDespues from "@/assets/rodilla-despues.jpg";
 
 function useReveal() {
   useEffect(() => {
@@ -243,15 +242,15 @@ function Solution() {
 
 function Testimonials() {
   const items = [
-    { img: antesDespues1, q: "Tenía 8 meses con dolor en la espalda baja. Tres sesiones con Marco y ya duermo sin despertarme a mitad de la noche.", a: "Carlos R., 52 años, Monterrey" },
-    { img: antesDespues2, q: "Me dijeron que era el nervio ciático y que tocaba operación. Marco me lo resolvió sin cirugía. No lo podía creer.", a: "Patricia G., 44 años, San Pedro" },
-    { img: antesDespues3, q: "Llevaba años tomando medicamentos para el cuello. En dos semanas con Marco sentí más alivio que en todo ese tiempo.", a: "Roberto M., 47 años, Monterrey" },
+    { q: "Tuve que dejar de correr por el dolor en la rodilla. Después de unas semanas con Marco, volví a salir a entrenar como antes.", a: "Carlos R., 52 años, Monterrey" },
+    { q: "Tuve que dejar de subir las escaleras de mi casa por el dolor en la rodilla. Hoy me muevo sin pensarlo dos veces.", a: "Patricia G., 44 años, San Pedro" },
+    { q: "Tuve que dejar de jugar fútbol con mis hijos por el dolor en la rodilla. Marco me regresó la movilidad que creía perdida.", a: "Roberto M., 47 años, Monterrey" },
   ];
   return (
     <section style={{ backgroundColor: "#E8F3F3" }} className="py-14 md:py-24">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <h2 className="reveal text-3xl text-[#0F4C4C] md:text-[40px]">
-          Lo que dicen los pacientes de Marco en Monterrey
+          Eliminaron el dolor y recuperaron la movilidad que creían perdida
         </h2>
         <p className="reveal mt-3 text-base text-[#3F6B6B] md:text-lg">
           Resultados reales: antes y después del tratamiento.
@@ -263,22 +262,33 @@ function Testimonials() {
               className="reveal card-lift min-w-[85%] snap-center overflow-hidden rounded-xl border-l-4 border-[#E8621A] bg-white shadow-sm md:min-w-0"
               style={{ transitionDelay: `${i * 0.15}s` }}
             >
-              <div className="relative">
-                <img
-                  src={t.img}
-                  alt={`Antes y después: ${t.a}`}
-                  loading="lazy"
-                  width={1024}
-                  height={640}
-                  className="aspect-[16/10] w-full object-cover"
-                />
-                <div className="pointer-events-none absolute inset-y-0 left-1/2 w-px bg-white/70" />
-                <span className="absolute left-3 top-3 rounded-md bg-[#0F4C4C]/85 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-wider text-white">
-                  Antes
-                </span>
-                <span className="absolute right-3 top-3 rounded-md bg-[#E8621A] px-2.5 py-1 font-display text-xs font-bold uppercase tracking-wider text-white">
-                  Después
-                </span>
+              <div className="relative grid grid-cols-2">
+                <div className="relative">
+                  <img
+                    src={rodillaAntes}
+                    alt={`Antes del tratamiento: ${t.a}`}
+                    loading="lazy"
+                    width={784}
+                    height={1176}
+                    className="aspect-[3/4] w-full object-cover"
+                  />
+                  <span className="absolute left-2 top-2 rounded-md bg-[#0F4C4C]/85 px-2 py-1 font-display text-[10px] font-bold uppercase tracking-wider text-white md:text-xs">
+                    Antes
+                  </span>
+                </div>
+                <div className="relative">
+                  <img
+                    src={rodillaDespues}
+                    alt={`Después del tratamiento: ${t.a}`}
+                    loading="lazy"
+                    width={784}
+                    height={1176}
+                    className="aspect-[3/4] w-full object-cover"
+                  />
+                  <span className="absolute right-2 top-2 rounded-md bg-[#E8621A] px-2 py-1 font-display text-[10px] font-bold uppercase tracking-wider text-white md:text-xs">
+                    Después
+                  </span>
+                </div>
               </div>
               <div className="p-6">
                 <blockquote className="text-base leading-relaxed text-[#0F4C4C] md:text-lg">
