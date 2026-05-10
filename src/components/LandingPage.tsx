@@ -6,6 +6,10 @@ import logoMarco from "@/assets/logo.jpg";
 import marcoFoto from "@/assets/marco.jpg";
 import rodillaAntes from "@/assets/rodilla-antes.jpg";
 import rodillaDespues from "@/assets/rodilla-despues.jpg";
+import espaldaAntes from "@/assets/espalda-antes.jpg";
+import espaldaDespues from "@/assets/espalda-despues.jpg";
+import cuelloAntes from "@/assets/cuello-antes.jpg";
+import cuelloDespues from "@/assets/cuello-despues.jpg";
 
 function useReveal() {
   useEffect(() => {
@@ -536,16 +540,22 @@ function LifeChange() {
       q: "Llevaba 3 años sin poder cargar a mi hija sin que me doliera la espalda. Hoy juego con ella en el piso, la cargo, salimos a caminar. Recuperé mi rol de mamá.",
       a: "Andrea L., 38 años, Monterrey",
       tag: "Volvió a cargar a su hija",
+      antes: espaldaAntes,
+      despues: espaldaDespues,
     },
     {
       q: "Tuve que dejar de correr por el dolor en la rodilla. Pensé que era para siempre. Marco encontró el origen real — venía de la cadera. Hoy ya volví a entrenar maratón.",
       a: "Diego H., 41 años, San Pedro",
       tag: "Volvió a correr",
+      antes: rodillaAntes,
+      despues: rodillaDespues,
     },
     {
       q: "Estuve a punto de pedir incapacidad permanente por el dolor de cuello. Marco me devolvió mi trabajo y mi independencia. No exagero cuando digo que me cambió la vida.",
       a: "María Fernanda S., 49 años, Monterrey",
       tag: "Volvió a trabajar",
+      antes: cuelloAntes,
+      despues: cuelloDespues,
     },
   ];
   return (
@@ -566,11 +576,11 @@ function LifeChange() {
             >
               <div className="grid grid-cols-2 gap-0">
                 <div className="relative">
-                  <img src={rodillaAntes} alt="Antes del tratamiento" className="h-full w-full object-cover" loading="lazy" />
+                  <img src={t.antes} alt="Antes del tratamiento" className="h-full w-full object-cover" loading="lazy" />
                   <span className="absolute left-2 top-2 rounded bg-black/70 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">Antes</span>
                 </div>
                 <div className="relative">
-                  <img src={rodillaDespues} alt="Después del tratamiento" className="h-full w-full object-cover" loading="lazy" />
+                  <img src={t.despues} alt="Después del tratamiento" className="h-full w-full object-cover" loading="lazy" />
                   <span className="absolute left-2 top-2 rounded bg-[#E8621A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">Después</span>
                 </div>
               </div>
