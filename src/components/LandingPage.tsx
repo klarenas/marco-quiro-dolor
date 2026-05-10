@@ -2,6 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import ExitPopup from "./ExitPopup";
 import WhatsAppWidget from "./WhatsAppWidget";
 import StickyCtaBar from "./StickyCtaBar";
+import logoMarco from "@/assets/logo.jpg";
+import marcoFoto from "@/assets/marco.jpg";
+import antesDespues1 from "@/assets/antes-despues-1.jpg";
+import antesDespues2 from "@/assets/antes-despues-2.jpg";
+import antesDespues3 from "@/assets/antes-despues-3.jpg";
 
 function useReveal() {
   useEffect(() => {
@@ -85,12 +90,26 @@ function Hero() {
       <div className="absolute inset-0 opacity-20" style={{
         background: "radial-gradient(circle at 80% 20%, #E8621A 0%, transparent 40%)",
       }} />
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pt-16 pb-12 md:grid-cols-[1.1fr_1fr] md:gap-12 md:px-8 md:pt-24 md:pb-20 lg:min-h-screen lg:items-center">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pt-10 pb-12 md:grid-cols-[1.1fr_1fr] md:gap-12 md:px-8 md:pt-16 md:pb-20 lg:min-h-screen lg:items-center">
         <div>
-          <p className="anim-fade-up mb-4 inline-block rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#BFE3E0]">
-            Quiropráctico · Monterrey, NL
-          </p>
-          <h1 className="anim-fade-up text-[40px] leading-[1.02] md:text-[64px] lg:text-[72px]">
+          <div className="anim-fade-up mb-6 flex items-center gap-3">
+            <img
+              src={logoMarco}
+              alt="Logo Marco Santillán"
+              className="h-14 w-14 rounded-full bg-white p-1.5 shadow-lg md:h-16 md:w-16"
+              width={64}
+              height={64}
+            />
+            <div className="leading-tight">
+              <p className="font-display text-lg font-extrabold uppercase tracking-wide text-white md:text-xl">
+                Marco Santillán
+              </p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#BFE3E0]">
+                Terapeuta · Monterrey, NL
+              </p>
+            </div>
+          </div>
+          <h1 className="anim-fade-up text-[28px] leading-[1.1] md:text-[40px] lg:text-[48px]">
             Deja de vivir con el dolor que los medicamentos no te quitan.
           </h1>
           <p className="anim-fade-up delay-200 mt-6 text-base text-[#BFE3E0] md:text-xl">
@@ -108,42 +127,33 @@ function Hero() {
           </p>
         </div>
 
-        <div className="anim-fade-right relative h-[40vh] overflow-hidden rounded-2xl md:h-[560px]">
+        <div className="anim-fade-right relative h-[50vh] overflow-hidden rounded-2xl shadow-2xl md:h-[560px]">
+          <img
+            src={marcoFoto}
+            alt="Marco Santillán, terapeuta quiropráctico en su consultorio en Monterrey"
+            className="absolute inset-0 h-full w-full object-cover object-top"
+            width={952}
+            height={1064}
+          />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(135deg, #1F7A7A 0%, #0F4C4C 60%, #082828 100%)",
+                "linear-gradient(180deg, transparent 50%, rgba(15,76,76,0.85) 100%)",
             }}
           />
-          <div
-            className="absolute inset-0 opacity-40"
-            style={{
-              background:
-                "radial-gradient(circle at 30% 30%, #E8621A22 0%, transparent 60%), radial-gradient(circle at 70% 80%, #ffffff15 0%, transparent 50%)",
-            }}
-          />
-          <svg viewBox="0 0 400 500" className="absolute inset-0 h-full w-full">
-            <defs>
-              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stopColor="#E8621A" stopOpacity="0.9" />
-                <stop offset="100%" stopColor="#E8621A" stopOpacity="0.1" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M200 60 C 240 100, 240 140, 200 180 S 160 260, 200 300 S 240 380, 200 440"
-              stroke="url(#g1)"
-              strokeWidth="6"
-              fill="none"
-              strokeLinecap="round"
+          <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 rounded-xl bg-black/50 p-4 backdrop-blur-sm">
+            <img
+              src={logoMarco}
+              alt=""
+              className="h-10 w-10 rounded-full bg-white p-1"
+              width={40}
+              height={40}
             />
-            {[80, 130, 180, 230, 280, 330, 380, 420].map((y, i) => (
-              <line key={i} x1="170" x2="230" y1={y} y2={y} stroke="#ffffff" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round" />
-            ))}
-          </svg>
-          <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-black/40 p-4 backdrop-blur-sm">
-            <p className="font-display text-sm font-bold uppercase tracking-wider text-white">Marco Santillán</p>
-            <p className="text-xs text-[#BFE3E0]">Terapeuta Quiropráctico · Dolorólogo</p>
+            <div>
+              <p className="font-display text-sm font-bold uppercase tracking-wider text-white">Marco Santillán</p>
+              <p className="text-xs text-[#BFE3E0]">Terapeuta Quiropráctico · Dolorólogo</p>
+            </div>
           </div>
         </div>
       </div>
@@ -233,9 +243,9 @@ function Solution() {
 
 function Testimonials() {
   const items = [
-    { q: "Tenía 8 meses con dolor en la espalda baja. Tres sesiones con Marco y ya duermo sin despertarme a mitad de la noche.", a: "Carlos R., 52 años, Monterrey" },
-    { q: "Me dijeron que era el nervio ciático y que tocaba operación. Marco me lo resolvió sin cirugía. No lo podía creer.", a: "Patricia G., 44 años, San Pedro" },
-    { q: "Llevaba años tomando medicamentos para el cuello. En dos semanas con Marco sentí más alivio que en todo ese tiempo.", a: "Roberto M., 47 años, Monterrey" },
+    { img: antesDespues1, q: "Tenía 8 meses con dolor en la espalda baja. Tres sesiones con Marco y ya duermo sin despertarme a mitad de la noche.", a: "Carlos R., 52 años, Monterrey" },
+    { img: antesDespues2, q: "Me dijeron que era el nervio ciático y que tocaba operación. Marco me lo resolvió sin cirugía. No lo podía creer.", a: "Patricia G., 44 años, San Pedro" },
+    { img: antesDespues3, q: "Llevaba años tomando medicamentos para el cuello. En dos semanas con Marco sentí más alivio que en todo ese tiempo.", a: "Roberto M., 47 años, Monterrey" },
   ];
   return (
     <section style={{ backgroundColor: "#E8F3F3" }} className="py-14 md:py-24">
@@ -243,19 +253,41 @@ function Testimonials() {
         <h2 className="reveal text-3xl text-[#0F4C4C] md:text-[40px]">
           Lo que dicen los pacientes de Marco en Monterrey
         </h2>
+        <p className="reveal mt-3 text-base text-[#3F6B6B] md:text-lg">
+          Resultados reales: antes y después del tratamiento.
+        </p>
         <div className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:overflow-visible">
           {items.map((t, i) => (
             <figure
               key={i}
-              className="reveal card-lift min-w-[85%] snap-center rounded-xl border-l-4 border-[#E8621A] bg-white p-6 shadow-sm md:min-w-0"
+              className="reveal card-lift min-w-[85%] snap-center overflow-hidden rounded-xl border-l-4 border-[#E8621A] bg-white shadow-sm md:min-w-0"
               style={{ transitionDelay: `${i * 0.15}s` }}
             >
-              <blockquote className="text-base leading-relaxed text-[#0F4C4C] md:text-lg">
-                "{t.q}"
-              </blockquote>
-              <figcaption className="mt-4 font-display text-sm font-bold uppercase tracking-wide text-[#1F7A7A]">
-                — {t.a}
-              </figcaption>
+              <div className="relative">
+                <img
+                  src={t.img}
+                  alt={`Antes y después: ${t.a}`}
+                  loading="lazy"
+                  width={1024}
+                  height={640}
+                  className="aspect-[16/10] w-full object-cover"
+                />
+                <div className="pointer-events-none absolute inset-y-0 left-1/2 w-px bg-white/70" />
+                <span className="absolute left-3 top-3 rounded-md bg-[#0F4C4C]/85 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-wider text-white">
+                  Antes
+                </span>
+                <span className="absolute right-3 top-3 rounded-md bg-[#E8621A] px-2.5 py-1 font-display text-xs font-bold uppercase tracking-wider text-white">
+                  Después
+                </span>
+              </div>
+              <div className="p-6">
+                <blockquote className="text-base leading-relaxed text-[#0F4C4C] md:text-lg">
+                  "{t.q}"
+                </blockquote>
+                <figcaption className="mt-4 font-display text-sm font-bold uppercase tracking-wide text-[#1F7A7A]">
+                  — {t.a}
+                </figcaption>
+              </div>
             </figure>
           ))}
         </div>
