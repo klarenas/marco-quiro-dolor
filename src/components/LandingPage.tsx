@@ -555,24 +555,36 @@ function LifeChange() {
           Vidas que cambiaron
         </p>
         <h2 className="reveal text-3xl md:text-[44px]">
-          Eliminaron el dolor. Recuperaron lo que el dolor les había quitado.
+          Eliminaron el dolor y recuperaron la movilidad que este les había quitado.
         </h2>
         <div className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:overflow-visible">
           {items.map((t, i) => (
             <figure
               key={i}
-              className="reveal card-lift min-w-[85%] snap-center rounded-2xl bg-[#1F7A7A] p-6 shadow-lg md:min-w-0"
+              className="reveal card-lift min-w-[85%] snap-center overflow-hidden rounded-2xl bg-[#1F7A7A] shadow-lg md:min-w-0"
               style={{ transitionDelay: `${i * 0.15}s` }}
             >
-              <span className="inline-block rounded-full bg-[#E8621A] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
-                {t.tag}
-              </span>
-              <blockquote className="mt-4 text-base leading-relaxed text-white md:text-lg">
-                "{t.q}"
-              </blockquote>
-              <figcaption className="mt-4 font-display text-sm font-bold uppercase tracking-wide text-[#BFE3E0]">
-                — {t.a}
-              </figcaption>
+              <div className="grid grid-cols-2 gap-0">
+                <div className="relative">
+                  <img src={rodillaAntes} alt="Antes del tratamiento" className="h-full w-full object-cover" loading="lazy" />
+                  <span className="absolute left-2 top-2 rounded bg-black/70 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">Antes</span>
+                </div>
+                <div className="relative">
+                  <img src={rodillaDespues} alt="Después del tratamiento" className="h-full w-full object-cover" loading="lazy" />
+                  <span className="absolute left-2 top-2 rounded bg-[#E8621A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">Después</span>
+                </div>
+              </div>
+              <div className="p-6">
+                <span className="inline-block rounded-full bg-[#E8621A] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                  {t.tag}
+                </span>
+                <blockquote className="mt-4 text-base leading-relaxed text-white md:text-lg">
+                  "{t.q}"
+                </blockquote>
+                <figcaption className="mt-4 font-display text-sm font-bold uppercase tracking-wide text-[#BFE3E0]">
+                  — {t.a}
+                </figcaption>
+              </div>
             </figure>
           ))}
         </div>
