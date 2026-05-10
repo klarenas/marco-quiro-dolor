@@ -2,6 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import ExitPopup from "./ExitPopup";
 import WhatsAppWidget from "./WhatsAppWidget";
 import StickyCtaBar from "./StickyCtaBar";
+import logoMarco from "@/assets/logo.jpg";
+import marcoFoto from "@/assets/marco.jpg";
+import antesDespues1 from "@/assets/antes-despues-1.jpg";
+import antesDespues2 from "@/assets/antes-despues-2.jpg";
+import antesDespues3 from "@/assets/antes-despues-3.jpg";
 
 function useReveal() {
   useEffect(() => {
@@ -85,15 +90,29 @@ function Hero() {
       <div className="absolute inset-0 opacity-20" style={{
         background: "radial-gradient(circle at 80% 20%, #E8621A 0%, transparent 40%)",
       }} />
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pt-16 pb-12 md:grid-cols-[1.1fr_1fr] md:gap-12 md:px-8 md:pt-24 md:pb-20 lg:min-h-screen lg:items-center">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pt-10 pb-12 md:grid-cols-[1.1fr_1fr] md:gap-12 md:px-8 md:pt-16 md:pb-20 lg:min-h-screen lg:items-center">
         <div>
-          <p className="anim-fade-up mb-4 inline-block rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#CBD5E1]">
-            Quiropráctico · Monterrey, NL
-          </p>
-          <h1 className="anim-fade-up text-[40px] leading-[1.02] md:text-[64px] lg:text-[72px]">
+          <div className="anim-fade-up mb-6 flex items-center gap-3">
+            <img
+              src={logoMarco}
+              alt="Logo Marco Santillán"
+              className="h-14 w-14 rounded-full bg-white p-1.5 shadow-lg md:h-16 md:w-16"
+              width={64}
+              height={64}
+            />
+            <div className="leading-tight">
+              <p className="font-display text-lg font-extrabold uppercase tracking-wide text-white md:text-xl">
+                Marco Santillán
+              </p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#BFE3E0]">
+                Terapeuta · Monterrey, NL
+              </p>
+            </div>
+          </div>
+          <h1 className="anim-fade-up text-[28px] leading-[1.1] md:text-[40px] lg:text-[48px]">
             Deja de vivir con el dolor que los medicamentos no te quitan.
           </h1>
-          <p className="anim-fade-up delay-200 mt-6 text-base text-[#CBD5E1] md:text-xl">
+          <p className="anim-fade-up delay-200 mt-6 text-base text-[#BFE3E0] md:text-xl">
             Marco Santillán identifica la causa real de tu dolor y la trabaja desde la primera
             sesión — sin cirugía, sin inyecciones, sin pastillas que solo duran unas horas.
           </p>
@@ -103,47 +122,38 @@ function Hero() {
           <div className="anim-pop delay-400 mt-6">
             <CtaWhats full>→ Agenda tu sesión por WhatsApp</CtaWhats>
           </div>
-          <p className="anim-fade-up delay-600 mt-4 text-sm text-[#CBD5E1]">
+          <p className="anim-fade-up delay-600 mt-4 text-sm text-[#BFE3E0]">
             Sin compromiso. Solo dinos dónde te duele y agendamos tu evaluación.
           </p>
         </div>
 
-        <div className="anim-fade-right relative h-[40vh] overflow-hidden rounded-2xl md:h-[560px]">
+        <div className="anim-fade-right relative h-[50vh] overflow-hidden rounded-2xl shadow-2xl md:h-[560px]">
+          <img
+            src={marcoFoto}
+            alt="Marco Santillán, terapeuta quiropráctico en su consultorio en Monterrey"
+            className="absolute inset-0 h-full w-full object-cover object-top"
+            width={952}
+            height={1064}
+          />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(135deg, #1A3A6B 0%, #0B2545 60%, #0D0D1A 100%)",
+                "linear-gradient(180deg, transparent 50%, rgba(15,76,76,0.85) 100%)",
             }}
           />
-          <div
-            className="absolute inset-0 opacity-40"
-            style={{
-              background:
-                "radial-gradient(circle at 30% 30%, #E8621A22 0%, transparent 60%), radial-gradient(circle at 70% 80%, #ffffff15 0%, transparent 50%)",
-            }}
-          />
-          <svg viewBox="0 0 400 500" className="absolute inset-0 h-full w-full">
-            <defs>
-              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stopColor="#E8621A" stopOpacity="0.9" />
-                <stop offset="100%" stopColor="#E8621A" stopOpacity="0.1" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M200 60 C 240 100, 240 140, 200 180 S 160 260, 200 300 S 240 380, 200 440"
-              stroke="url(#g1)"
-              strokeWidth="6"
-              fill="none"
-              strokeLinecap="round"
+          <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 rounded-xl bg-black/50 p-4 backdrop-blur-sm">
+            <img
+              src={logoMarco}
+              alt=""
+              className="h-10 w-10 rounded-full bg-white p-1"
+              width={40}
+              height={40}
             />
-            {[80, 130, 180, 230, 280, 330, 380, 420].map((y, i) => (
-              <line key={i} x1="170" x2="230" y1={y} y2={y} stroke="#ffffff" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round" />
-            ))}
-          </svg>
-          <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-black/40 p-4 backdrop-blur-sm">
-            <p className="font-display text-sm font-bold uppercase tracking-wider text-white">Marco Santillán</p>
-            <p className="text-xs text-[#CBD5E1]">Terapeuta Quiropráctico · Dolorólogo</p>
+            <div>
+              <p className="font-display text-sm font-bold uppercase tracking-wider text-white">Marco Santillán</p>
+              <p className="text-xs text-[#BFE3E0]">Terapeuta Quiropráctico · Dolorólogo</p>
+            </div>
           </div>
         </div>
       </div>
@@ -158,9 +168,9 @@ function Problem() {
     'Empezaste a decirte: "Es la edad. Hay que aguantarse."',
   ];
   return (
-    <section style={{ backgroundColor: "#F4F6F9" }} className="py-12 md:py-20">
+    <section style={{ backgroundColor: "#E8F3F3" }} className="py-12 md:py-20">
       <div className="mx-auto max-w-4xl px-5 md:px-8">
-        <h2 className="reveal text-3xl text-[#0B2545] md:text-[40px]">
+        <h2 className="reveal text-3xl text-[#0F4C4C] md:text-[40px]">
           ¿Llevas semanas — o meses — con ese dolor en la espalda, el cuello o las piernas que
           simplemente no se va?
         </h2>
@@ -172,12 +182,12 @@ function Problem() {
               style={{ transitionDelay: `${i * 0.15}s` }}
             >
               <IconX />
-              <p className="text-base text-[#0B2545] md:text-lg">{t}</p>
+              <p className="text-base text-[#0F4C4C] md:text-lg">{t}</p>
             </li>
           ))}
         </ul>
         <div className="reveal mt-8 rounded-xl border-l-4 border-[#E8621A] bg-white p-6">
-          <p className="text-base leading-relaxed text-[#0B2545] md:text-lg">
+          <p className="text-base leading-relaxed text-[#0F4C4C] md:text-lg">
             <span className="font-display text-xl font-bold uppercase">No es la edad.</span> Y no
             hay que aguantarse. El problema es que nadie ha atacado la causa real — solo han
             tapado el síntoma. Cuando dejas de tomar el medicamento, el dolor vuelve porque la
@@ -196,12 +206,12 @@ function Solution() {
     { icon: <IconCal />, title: "Plan de seguimiento claro", body: "Sabes exactamente cuántas sesiones necesitas y por qué." },
   ];
   return (
-    <section style={{ backgroundColor: "#0B2545" }} className="py-14 text-white md:py-24">
+    <section style={{ backgroundColor: "#0F4C4C" }} className="py-14 text-white md:py-24">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <h2 className="reveal text-3xl md:text-[44px]">
           Marco Santillán no trata el dolor. Trata lo que lo produce.
         </h2>
-        <div className="reveal mt-6 max-w-3xl space-y-4 text-base text-[#CBD5E1] md:text-lg">
+        <div className="reveal mt-6 max-w-3xl space-y-4 text-base text-[#BFE3E0] md:text-lg">
           <p>
             Con ajuste quiropráctico y terapia manual especializada, Marco localiza exactamente
             qué estructura de tu cuerpo está generando esa señal de dolor — y la trabaja
@@ -218,11 +228,11 @@ function Solution() {
             <div
               key={i}
               className="reveal card-lift rounded-xl p-6"
-              style={{ backgroundColor: "#1A3A6B", transitionDelay: `${i * 0.2}s` }}
+              style={{ backgroundColor: "#1F7A7A", transitionDelay: `${i * 0.2}s` }}
             >
               {c.icon}
               <h3 className="mt-4 text-xl text-white">{c.title}</h3>
-              <p className="mt-2 text-sm text-[#CBD5E1] md:text-base">{c.body}</p>
+              <p className="mt-2 text-sm text-[#BFE3E0] md:text-base">{c.body}</p>
             </div>
           ))}
         </div>
@@ -233,33 +243,55 @@ function Solution() {
 
 function Testimonials() {
   const items = [
-    { q: "Tenía 8 meses con dolor en la espalda baja. Tres sesiones con Marco y ya duermo sin despertarme a mitad de la noche.", a: "Carlos R., 52 años, Monterrey" },
-    { q: "Me dijeron que era el nervio ciático y que tocaba operación. Marco me lo resolvió sin cirugía. No lo podía creer.", a: "Patricia G., 44 años, San Pedro" },
-    { q: "Llevaba años tomando medicamentos para el cuello. En dos semanas con Marco sentí más alivio que en todo ese tiempo.", a: "Roberto M., 47 años, Monterrey" },
+    { img: antesDespues1, q: "Tenía 8 meses con dolor en la espalda baja. Tres sesiones con Marco y ya duermo sin despertarme a mitad de la noche.", a: "Carlos R., 52 años, Monterrey" },
+    { img: antesDespues2, q: "Me dijeron que era el nervio ciático y que tocaba operación. Marco me lo resolvió sin cirugía. No lo podía creer.", a: "Patricia G., 44 años, San Pedro" },
+    { img: antesDespues3, q: "Llevaba años tomando medicamentos para el cuello. En dos semanas con Marco sentí más alivio que en todo ese tiempo.", a: "Roberto M., 47 años, Monterrey" },
   ];
   return (
-    <section style={{ backgroundColor: "#F4F6F9" }} className="py-14 md:py-24">
+    <section style={{ backgroundColor: "#E8F3F3" }} className="py-14 md:py-24">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <h2 className="reveal text-3xl text-[#0B2545] md:text-[40px]">
+        <h2 className="reveal text-3xl text-[#0F4C4C] md:text-[40px]">
           Lo que dicen los pacientes de Marco en Monterrey
         </h2>
+        <p className="reveal mt-3 text-base text-[#3F6B6B] md:text-lg">
+          Resultados reales: antes y después del tratamiento.
+        </p>
         <div className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:overflow-visible">
           {items.map((t, i) => (
             <figure
               key={i}
-              className="reveal card-lift min-w-[85%] snap-center rounded-xl border-l-4 border-[#E8621A] bg-white p-6 shadow-sm md:min-w-0"
+              className="reveal card-lift min-w-[85%] snap-center overflow-hidden rounded-xl border-l-4 border-[#E8621A] bg-white shadow-sm md:min-w-0"
               style={{ transitionDelay: `${i * 0.15}s` }}
             >
-              <blockquote className="text-base leading-relaxed text-[#0B2545] md:text-lg">
-                "{t.q}"
-              </blockquote>
-              <figcaption className="mt-4 font-display text-sm font-bold uppercase tracking-wide text-[#1A3A6B]">
-                — {t.a}
-              </figcaption>
+              <div className="relative">
+                <img
+                  src={t.img}
+                  alt={`Antes y después: ${t.a}`}
+                  loading="lazy"
+                  width={1024}
+                  height={640}
+                  className="aspect-[16/10] w-full object-cover"
+                />
+                <div className="pointer-events-none absolute inset-y-0 left-1/2 w-px bg-white/70" />
+                <span className="absolute left-3 top-3 rounded-md bg-[#0F4C4C]/85 px-2.5 py-1 font-display text-xs font-bold uppercase tracking-wider text-white">
+                  Antes
+                </span>
+                <span className="absolute right-3 top-3 rounded-md bg-[#E8621A] px-2.5 py-1 font-display text-xs font-bold uppercase tracking-wider text-white">
+                  Después
+                </span>
+              </div>
+              <div className="p-6">
+                <blockquote className="text-base leading-relaxed text-[#0F4C4C] md:text-lg">
+                  "{t.q}"
+                </blockquote>
+                <figcaption className="mt-4 font-display text-sm font-bold uppercase tracking-wide text-[#1F7A7A]">
+                  — {t.a}
+                </figcaption>
+              </div>
             </figure>
           ))}
         </div>
-        <p className="reveal mt-8 text-center font-display text-lg font-bold uppercase tracking-wide text-[#0B2545]">
+        <p className="reveal mt-8 text-center font-display text-lg font-bold uppercase tracking-wide text-[#0F4C4C]">
           +13,000 personas siguen a Marco en Facebook · Monterrey, NL
         </p>
       </div>
@@ -276,7 +308,7 @@ function Offer() {
     "Precio desde $800 MXN por sesión — menos de lo que llevas gastando en medicamentos al mes",
   ];
   return (
-    <section style={{ backgroundColor: "#0B2545" }} className="py-14 text-white md:py-24">
+    <section style={{ backgroundColor: "#0F4C4C" }} className="py-14 text-white md:py-24">
       <div className="mx-auto max-w-[720px] px-5 md:px-8">
         <h2 className="reveal text-center text-3xl md:text-[40px]">
           En tu primera sesión con Marco recibes:
@@ -286,7 +318,7 @@ function Offer() {
             <li
               key={i}
               className="reveal flex items-start gap-4 rounded-xl p-4"
-              style={{ backgroundColor: "#1A3A6B", transitionDelay: `${i * 0.1}s` }}
+              style={{ backgroundColor: "#1F7A7A", transitionDelay: `${i * 0.1}s` }}
             >
               <IconCheck />
               <span className="text-base text-white md:text-lg">{t}</span>
@@ -316,7 +348,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         className="flex w-full items-center justify-between gap-4 p-5 text-left min-h-[48px]"
         aria-expanded={open}
       >
-        <span className="font-display text-lg font-bold uppercase tracking-wide text-[#0B2545] md:text-xl">
+        <span className="font-display text-lg font-bold uppercase tracking-wide text-[#0F4C4C] md:text-xl">
           {q}
         </span>
         <svg
@@ -333,7 +365,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         style={{ maxHeight: open ? ref.current?.scrollHeight ?? 500 : 0 }}
         className="overflow-hidden transition-[max-height] duration-300 ease-out"
       >
-        <div ref={ref} className="px-5 pb-5 text-base leading-relaxed text-[#1A3A6B]">
+        <div ref={ref} className="px-5 pb-5 text-base leading-relaxed text-[#1F7A7A]">
           {a}
         </div>
       </div>
@@ -349,9 +381,9 @@ function Faq() {
     { q: "¿Es seguro?", a: "Es terapia manual especializada. Sin fármacos, sin procedimientos invasivos. Marco tiene formación y experiencia tratando cientos de casos en Monterrey. Si tu caso requiere otro tipo de atención, te lo dice sin rodeos." },
   ];
   return (
-    <section style={{ backgroundColor: "#F4F6F9" }} className="py-14 md:py-24">
+    <section style={{ backgroundColor: "#E8F3F3" }} className="py-14 md:py-24">
       <div className="mx-auto max-w-3xl px-5 md:px-8">
-        <h2 className="reveal text-3xl text-[#0B2545] md:text-[40px]">Preguntas frecuentes</h2>
+        <h2 className="reveal text-3xl text-[#0F4C4C] md:text-[40px]">Preguntas frecuentes</h2>
         <div className="mt-8 space-y-3">
           {items.map((it, i) => (
             <FaqItem key={i} {...it} />
@@ -389,13 +421,13 @@ function LeadForm() {
 
   const fieldClass = (k: string) => {
     const base =
-      "h-12 w-full rounded-md border-2 bg-white px-4 text-[#0B2545] outline-none transition-colors focus:border-[#E8621A]";
+      "h-12 w-full rounded-md border-2 bg-white px-4 text-[#0F4C4C] outline-none transition-colors focus:border-[#E8621A]";
     if (!touched[k]) return `${base} border-white/20`;
     return errs[k] ? `${base} border-red-500` : `${base} border-green-500`;
   };
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4 rounded-2xl p-6 md:p-8" style={{ backgroundColor: "#1A3A6B" }}>
+    <form onSubmit={onSubmit} className="space-y-4 rounded-2xl p-6 md:p-8" style={{ backgroundColor: "#1F7A7A" }}>
       <div>
         <label className="mb-1.5 block text-sm font-semibold text-white">Nombre completo</label>
         <input
@@ -436,7 +468,7 @@ function LeadForm() {
         />
         {touched.email && errs.email && <p className="mt-1 text-xs text-red-300">{errs.email}</p>}
       </div>
-      <label className="flex items-start gap-3 text-sm text-[#CBD5E1]">
+      <label className="flex items-start gap-3 text-sm text-[#BFE3E0]">
         <input
           type="checkbox"
           checked={data.consent}
@@ -463,18 +495,18 @@ function LeadForm() {
 
 function FormSection() {
   return (
-    <section style={{ backgroundColor: "#0B2545" }} className="py-14 text-white md:py-24">
+    <section style={{ backgroundColor: "#0F4C4C" }} className="py-14 text-white md:py-24">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2 md:gap-14 md:px-8">
         <div className="reveal">
           <h2 className="text-3xl md:text-5xl">¿Listo para dejar de vivir con el dolor?</h2>
-          <p className="mt-6 text-base text-[#CBD5E1] md:text-lg">
+          <p className="mt-6 text-base text-[#BFE3E0] md:text-lg">
             Déjanos tus datos y te contactamos hoy mismo para agendar tu primera sesión con
             Marco. O escríbenos directo por WhatsApp si prefieres respuesta inmediata.
           </p>
           <div className="mt-6">
             <CtaWhats>→ Prefiero WhatsApp</CtaWhats>
           </div>
-          <ul className="mt-8 space-y-3 text-sm text-[#CBD5E1]">
+          <ul className="mt-8 space-y-3 text-sm text-[#BFE3E0]">
             <li className="flex items-center gap-2"><IconCheck /> Respuesta el mismo día</li>
             <li className="flex items-center gap-2"><IconCheck /> Sin compromiso</li>
             <li className="flex items-center gap-2"><IconCheck /> Atención directa con Marco</li>
@@ -507,7 +539,7 @@ function LifeChange() {
     },
   ];
   return (
-    <section style={{ backgroundColor: "#0D0D1A" }} className="py-14 text-white md:py-24">
+    <section style={{ backgroundColor: "#082828" }} className="py-14 text-white md:py-24">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <p className="reveal mb-3 inline-block rounded-full border border-[#E8621A]/40 bg-[#E8621A]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#E8621A]">
           Vidas que cambiaron
@@ -519,7 +551,7 @@ function LifeChange() {
           {items.map((t, i) => (
             <figure
               key={i}
-              className="reveal card-lift min-w-[85%] snap-center rounded-2xl bg-[#1A3A6B] p-6 shadow-lg md:min-w-0"
+              className="reveal card-lift min-w-[85%] snap-center rounded-2xl bg-[#1F7A7A] p-6 shadow-lg md:min-w-0"
               style={{ transitionDelay: `${i * 0.15}s` }}
             >
               <span className="inline-block rounded-full bg-[#E8621A] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
@@ -528,7 +560,7 @@ function LifeChange() {
               <blockquote className="mt-4 text-base leading-relaxed text-white md:text-lg">
                 "{t.q}"
               </blockquote>
-              <figcaption className="mt-4 font-display text-sm font-bold uppercase tracking-wide text-[#CBD5E1]">
+              <figcaption className="mt-4 font-display text-sm font-bold uppercase tracking-wide text-[#BFE3E0]">
                 — {t.a}
               </figcaption>
             </figure>
@@ -548,16 +580,16 @@ function Location() {
   const address = "Av. Lázaro Cárdenas 2400, Col. Valle Oriente, San Pedro Garza García, N.L.";
   const mapsQuery = encodeURIComponent(address);
   return (
-    <section style={{ backgroundColor: "#F4F6F9" }} className="py-14 md:py-24">
+    <section style={{ backgroundColor: "#E8F3F3" }} className="py-14 md:py-24">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2 md:items-center md:px-8">
         <div className="reveal">
-          <p className="mb-3 inline-block rounded-full bg-[#0B2545] px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white">
+          <p className="mb-3 inline-block rounded-full bg-[#0F4C4C] px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white">
             Consultorio en Monterrey
           </p>
-          <h2 className="text-3xl text-[#0B2545] md:text-[40px]">
+          <h2 className="text-3xl text-[#0F4C4C] md:text-[40px]">
             Tu sesión con Marco, en el corazón de Monterrey
           </h2>
-          <div className="mt-6 space-y-3 text-base text-[#1A3A6B] md:text-lg">
+          <div className="mt-6 space-y-3 text-base text-[#1F7A7A] md:text-lg">
             <p className="flex items-start gap-3">
               <svg viewBox="0 0 24 24" className="mt-1 h-6 w-6 shrink-0 text-[#E8621A]" fill="none" stroke="currentColor" strokeWidth="2.2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z" />
@@ -585,7 +617,7 @@ function Location() {
               href={`https://www.google.com/maps/search/?api=1&query=${mapsQuery}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-md border-2 border-[#0B2545] bg-white px-6 py-4 font-display text-base font-bold uppercase tracking-wide text-[#0B2545] transition-colors hover:bg-[#0B2545] hover:text-white"
+              className="inline-flex items-center justify-center rounded-md border-2 border-[#0F4C4C] bg-white px-6 py-4 font-display text-base font-bold uppercase tracking-wide text-[#0F4C4C] transition-colors hover:bg-[#0F4C4C] hover:text-white"
             >
               Cómo llegar
             </a>
@@ -609,7 +641,8 @@ function Location() {
 
 function MiniFooter() {
   return (
-    <footer style={{ backgroundColor: "#0D0D1A" }} className="py-8 text-center text-xs text-[#CBD5E1]">
+    <footer style={{ backgroundColor: "#082828" }} className="py-10 text-center text-xs text-[#BFE3E0]">
+      <img src={logoMarco} alt="Logo Marco Santillán" className="mx-auto mb-3 h-14 w-14 rounded-full bg-white p-1.5" width={56} height={56} />
       <p>© {new Date().getFullYear()} Marco Santillán · Monterrey, NL</p>
       <p className="mt-2 space-x-4">
         <a href="/politica-privacidad" className="hover:text-white">Política de Privacidad</a>

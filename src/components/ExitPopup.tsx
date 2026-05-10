@@ -121,7 +121,7 @@ export default function ExitPopup() {
       <div
         className="relative w-full max-w-[480px] rounded-2xl p-6 md:p-8"
         style={{
-          backgroundColor: "#0D0D1A",
+          backgroundColor: "#082828",
           border: "2px solid #E8621A",
           boxShadow: "0 25px 60px -10px rgba(0,0,0,0.7), 0 0 40px rgba(232,98,26,0.25)",
           animation: "popupZoom 0.35s ease-out",
@@ -145,7 +145,7 @@ export default function ExitPopup() {
             >
               Espera — antes de irte
             </h2>
-            <p className="mt-3 text-base leading-relaxed" style={{ color: "#CBD5E1" }}>
+            <p className="mt-3 text-base leading-relaxed" style={{ color: "#BFE3E0" }}>
               Llevas tiempo con ese dolor. No lo dejes para mañana. Déjanos tu teléfono y
               Marco te llama hoy.
             </p>
@@ -160,7 +160,7 @@ export default function ExitPopup() {
                 onChange={(e) => setPhone(e.target.value)}
                 className="h-[52px] w-full rounded-md border-2 px-4 text-white placeholder:text-white/50 outline-none transition-colors focus:border-[#E8621A]"
                 style={{
-                  backgroundColor: "#1A3A6B",
+                  backgroundColor: "#1F7A7A",
                   borderColor: err ? "#dc2626" : "transparent",
                 }}
                 required
@@ -175,13 +175,13 @@ export default function ExitPopup() {
               </button>
             </form>
 
-            <p className="mt-4 text-center text-xs" style={{ color: "#CBD5E1" }}>
+            <p className="mt-4 text-center text-xs" style={{ color: "#BFE3E0" }}>
               Tu número no se comparte con nadie. Solo te contacta Marco.
             </p>
             <button
               onClick={() => setOpen(false)}
               className="mt-3 block w-full text-center text-[13px] underline-offset-2 hover:underline"
-              style={{ color: "#CBD5E1" }}
+              style={{ color: "#BFE3E0" }}
             >
               No gracias, prefiero seguir con el dolor
             </button>
@@ -208,7 +208,7 @@ export default function ExitPopup() {
             <p className="mt-5 font-display text-xl font-bold uppercase text-white">
               ¡Listo!
             </p>
-            <p className="mt-2 text-base" style={{ color: "#CBD5E1" }}>
+            <p className="mt-2 text-base" style={{ color: "#BFE3E0" }}>
               Marco te contactará pronto.
             </p>
           </div>
