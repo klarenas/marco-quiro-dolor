@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import ExitPopup from "./ExitPopup";
 import WhatsAppWidget from "./WhatsAppWidget";
-import StickyCtaBar from "./StickyCtaBar";
+
 import logoMarco from "@/assets/logo.jpg";
 import marcoFoto from "@/assets/marco.jpg";
 import antesDespues1 from "@/assets/antes-despues-1.jpg";
@@ -669,7 +669,7 @@ export default function LandingPage() {
       <MiniFooter />
       <ExitPopup />
       <WhatsAppWidget />
-      <StickyCtaBar />
+      
     </main>
   );
 }
